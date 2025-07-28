@@ -1,0 +1,125 @@
+@import url('./reset.css');
+
+
+/*---------------------------------------------------------------
+MOBILE
+Il faut prendre en compte que l'ensemble des déclarations qui suivent sera interprété par les appareils mobiles (téléphones, etc ...)
+----------------------------------------------------------------*/
+
+body {
+    padding: 2rem;
+}
+
+
+
+/*---------------------------
+Conteneur parent en grille
+----------------------------*/
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+    border: solid red 2px;
+    grid-template-areas:
+        "hero"
+        "content"
+        "sidebar"
+        "ads"
+        "images"
+        "posts"
+}
+
+
+/*---------------------------
+Enfants de la grille
+----------------------------*/
+.grid-item,
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1rem;
+    font-size: clamp(16px, calc(14px + 1.2vw), 40px);
+}
+
+.content {
+    background: #f5c531;
+    grid-area: content;
+}
+
+
+header {
+    background-color: #55d4eb;
+    font-size: clamp(16px, calc(25px + 1.2vw), 40px);
+}
+
+.hero {
+    background-color: #904dd9;
+    grid-area: hero;
+}
+
+.sidebar {
+    background-color: #a0c263;
+    grid-area: sidebar;
+}
+
+.ads {
+    background-color: #898989;
+    grid-area: ads;
+}
+
+.images {
+    background-color: #2bb673;
+    grid-area: images;
+}
+
+.posts {
+    background-color: #b388b9;
+    grid-area: posts;
+}
+
+
+/*----------------------------------------------------------------------------------
+TABLETTE :
+Le code CSS contenu dans cette media-query sera interprété par tous les navigateurs 
+dont la largeur du viewport (zone d'affichage) est AU MINIMUM égale à 800px.
+L'ensemble des déclarations CSS précédentes sera également pris en compte.
+-------------------------------------------------------------------------------------*/
+@media screen and (min-width:50em) {
+    /* 800 px 
+    800 / 16 = 50em */
+
+    .grid-container {
+        grid-template-areas:
+            "hero content content"
+            "sidebar ads ads"
+            "images images posts"
+    }
+
+}
+
+/*----------------------------------------------------------------------------------
+DESKTOP
+Le code CSS contenu dans cette media-query sera interprété par tous les navigateurs 
+dont la largeur du viewport (zone d'affichage) est AU MINIMUM égale à 1200px.
+L'ensemble des déclarations CSS précédentes sera également pris en compte.
+------------------------------------------------------------------------------------*/
+@media screen and (min-width:1200px) {
+    .grid-container {
+        grid-template-areas:
+            "sidebar content hero images"
+            "sidebar posts posts ads";
+    }
+}
+
+
+
+
+
+
+footer {
+    background-color: #008cff;
+}

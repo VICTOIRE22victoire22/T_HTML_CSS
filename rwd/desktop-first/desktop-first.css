@@ -1,0 +1,120 @@
+@import url('./reset.css');
+
+
+/*-------------------------------------------------------
+DESKTOP
+_________________________________________________________*/
+
+body {
+    padding: 2rem;
+}
+
+
+/*---------------------------
+Conteneur parent en grille
+----------------------------*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "sidebar content hero images"
+        "sidebar posts posts ads";
+    gap: 2rem;
+    margin: 2rem 0;
+    border: solid red 2px;
+}
+
+/*---------------------------
+Enfants de la grille
+----------------------------*/
+.grid-item,
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1rem;
+}
+
+.content {
+    background: #f5c531;
+    grid-area: content;
+}
+
+
+header {
+    background-color: #55d4eb;
+}
+
+.hero {
+    background-color: #904dd9;
+    grid-area: hero;
+}
+
+.sidebar {
+    background-color: #a0c263;
+    grid-area: sidebar;
+}
+
+.ads {
+    background-color: #898989;
+    grid-area: ads;
+}
+
+.images {
+    background-color: #2bb673;
+    grid-area: images;
+}
+
+.posts {
+    background-color: #b388b9;
+    grid-area: posts;
+}
+
+
+/*----------------------------------------------------------------------------------
+TABLETTE :
+Le code CSS contenu dans cette media-query sera interprété par tous les navigateurs 
+dont la largeur du viewport (zone d'affichage) est AU MAXIMUM égale à 800px.
+L'ensemble des déclarations CSS précédentes sera également pris en compte.
+-------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px) {
+
+    .grid-container {
+        grid-template-areas:
+            "hero content content"
+            "sidebar ads ads"
+            "images images posts"
+    }
+
+}
+
+/*----------------------------------------------------------------------------------
+MOBILE
+Le code CSS contenu dans cette media-query sera interprété par tous les navigateurs 
+dont la largeur du viewport (zone d'affichage) est AU MAXIMUM égale à 500px.
+L'ensemble des déclarations CSS précédentes sera également pris en compte.
+------------------------------------------------------------------------------------*/
+@media screen and (max-width:500px) {
+
+    .grid-container {
+        grid-template-areas:
+            "hero"
+            "content"
+            "sidebar"
+            "ads"
+            "images"
+            "posts"
+    }
+
+}
+
+
+
+
+
+
+footer {
+    background-color: #008cff;
+}

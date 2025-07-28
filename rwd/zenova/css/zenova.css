@@ -1,0 +1,14 @@
+@import url('./reset.css');
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/*-----------------------------------------------
+Bandeau des produits Zenova
+-------------------------------------------------*/
+.zenova {
+    border: solid red 2px;
+}

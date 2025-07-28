@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA-QUETRIES</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        /* CODE CSS que vont interpréter les téléphones */
+        body {
+            background-color: #fff;
+            transition: background-color 1s ease;
+        }
+
+        p {
+            transition: font-size 3s ease;
+        }
+
+        .bg-green {
+            display: none;
+        }
+
+        /* On cible tous les écrans dont le viewport est d'AU-MOINS 500px */
+        @media screen and (min-width:500px) {
+            body {
+                background-color: #2cb325;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            .bg-white {
+                display: none;
+            }
+
+            .bg-green {
+                display: block;
+            }
+        }
+
+        /* On cible tous les écrans dont le viewport est d'AU-MOINS 606px */
+        @media screen and (min-width:606px) {
+            .toto {
+                display: none;
+            }
+        }
+
+        /* On cible tous les écrans dont le viewport est d'AU-MOINS 1200px */
+        @media screen and (min-width:1200px) {
+            body {
+                background-color: #d44b19;
+            }
+
+            p {
+                font-size: 4rem;
+            }
+        }
+
+        /* On cible tous les écrans dont le viewport est d'AU-MOINS 1800px */
+        @media screen and (min-width:1800px) {
+            body {
+                background-color: #384ad8;
+            }
+
+            p {
+                font-size: 10rem;
+            }
+        }
+
+        img {
+            max-width: 70%;
+            margin: 2rem auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img1.jpg" alt="img1" class="bg-white">
+    <img src="./img2.jpg" alt="img2" class="bg-green">
+    <p>Je suis un paragraphe en unités rem</p>
+    <p style="font-size: 16px">Je suis un paragraphe en unités px</p>
+</body>
+
+</html>
