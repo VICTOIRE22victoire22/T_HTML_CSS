@@ -1,0 +1,36 @@
+@import url('./reset.css');
+
+body {
+    padding: 2rem;
+}
+
+header {
+    background-color: #cbc5c5;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #e5a0a0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+a {
+    background-color: #418fce;
+    padding: 5px 1rem;
+    border-radius: 7px;
+}
+
+a:first-of-type {
+    background-color: #fff;
+}
+
+img {
+    width: 7rem;
+    /* pousse tous les frères et soeurs vers la droite */
+    margin-right: auto;
+}

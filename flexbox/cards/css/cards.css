@@ -1,0 +1,100 @@
+@import url('./reset.css');
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+    padding: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    border: solid red 1px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    /* permettre aux enfant flex de grandir s'ils en ont la possibilité */
+    flex: 1;
+    /* largeur minimum */
+    min-width: 25rem;
+    border: solid #525050 1px;
+    width: 20rem;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px rgba(128, 127, 127, 0.5);
+}
+
+
+.card__figure {
+    border-radius: 6px 6px 0 0;
+    height: 20rem;
+    /* border: solid 3px green; */
+    overflow: hidden;
+}
+
+.card__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.card__tag,
+.card__title,
+.card__description {
+    margin: 0 1rem;
+}
+
+.card__tag {
+    align-self: flex-start;
+    background-color: #412f9e;
+    color: #fff;
+    border-radius: 10px;
+    padding: 3px 6px;
+}
+
+.card__title {
+    font-size: 2rem;
+}
+
+.card__description {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.card__footer {
+    display: flex;
+    gap: 1rem;
+    /* background-color: #e49292; */
+    padding: 4px 6px;
+}
+
+.card__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.card__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.card__user--info {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card__user--date {
+    font-size: 1rem;
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="M.TOULOUSE">
+  <meta name="keywords"
+    content="flexbox, css, guide, tutoriel, propriétés, flex, flex-direction, justify-content, flex-wrap, flex-grow, flex-shrink, flex-basis, align-self">
+  <meta name="description"
+    content="Guide visuel interactif sur Flexbox CSS, présentant les propriétés avec exemples dynamiques.">
+  <title>FLEXBOX</title>
+  <link rel="stylesheet" href="./flexbox.css">
+</head>
+
+<body>
+  <header>
+    <h1>Guide interactif : Flexbox CSS</h1>
+  </header>
+
+  <main>
+    <article>
+      <details>
+        <summary>
+          <h2>Propriétés du conteneur PARENT (flex-container)</h2>
+        </summary>
+        <p class="section-intro">Découvrez comment contrôler la disposition de vos éléments avec ces propriétés
+          essentielles du conteneur parent.</p>
+
+        <details>
+          <summary>
+            <h3 class="flex-property__name">display</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit un conteneur en mode flex.</p>
+            <code>Valeurs : flex | inline-flex</code>
+
+            <ul class="flex-container display--flex">
+              <span class="flex-property__value">flex</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container display--inline-flex">
+              <span class="flex-property__value">inline-flex</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container display--inline-flex">
+              <span class="flex-property__value">inline-flex</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container display--inline-flex">
+              <span class="flex-property__value">inline-flex</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+          </section>
+        </details>
+
+        <details>
+          <summary>
+            <h3 class="flex-property__name">flex-direction</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'axe principal.</p>
+            <code>Valeurs : row (par défaut) | row-reverse | column | column-reverse</code>
+            <ul class="flex-container flex-direction--row">
+              <span class="flex-property__value">row (défaut)</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container flex-direction--row-reverse">
+              <span class="flex-property__value">row-reverse</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container flex-direction--column">
+              <span class="flex-property__value">column</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container flex-direction--column-reverse">
+              <span class="flex-property__value">column-reverse</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+          </section>
+        </details>
+
+        <details>
+          <summary>
+            <h3 class="flex-property__name">flex-wrap</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit si les éléments doivent être sur une seule ligne ou
+              plusieurs.<br>Rétrécir la fenêtre
+              pour observer l'effet !
+            </p>
+            <code>Valeurs : nowrap (par défaut) | wrap | wrap-reverse</code>
+            <ul class="flex-container flex-wrap--nowrap">
+              <span class="flex-property__value">nowrap (défaut)</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container flex-wrap--wrap">
+              <span class="flex-property__value">wrap</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container flex-wrap--wrap-reverse">
+              <span class="flex-property__value">wrap-reverse</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+          </section>
+        </details>
+
+        <!-- JUSTIFY-CONTENT  -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">justify-content</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'alignement des éléments le long de l'axe principal.</p>
+            <code>Valeurs : flex-start | center | flex-end | space-between | space-around</code>
+            <ul class="flex-container justify-content--flex-start">
+              <span class="flex-property__value">flex-start</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container justify-content--center">
+              <span class="flex-property__value">center</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container justify-content--flex-end">
+              <span class="flex-property__value">flex-end</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container justify-content--space-between">
+              <span class="flex-property__value">space-between</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container justify-content--space-around">
+              <span class="flex-property__value">space-around</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container justify-content--space-evenly">
+              <span class=" flex-property__value">space-evenly</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+          </section>
+        </details>
+
+        <!-- ALIGN-ITEMS  -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">align-items</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'alignement des éléments le long de l'axe transversal.</p>
+            <code>Valeurs : stretch (par défaut) | flex-start | center | flex-end | baseline</code>
+            <ul class="flex-container align-items--stretch">
+              <span class="flex-property__value">stretch (défaut)</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container align-items--flex-start">
+              <span class="flex-property__value">flex-start</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container align-items--center">
+              <span class="flex-property__value">center</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container align-items--flex-end">
+              <span class="flex-property__value">flex-end</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container align-items--baseline">
+              <span class="flex-property__value">baseline</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+          </section>
+        </details>
+
+        <!-- ALIGN-CONTENT  -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">align-content</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'alignement des lignes le long de l'axe transversal. Il est
+              impératif que le parent soit munie de la propriété <code
+                style="display:inline">flex-wrap: wrap</code>.<br>Rétrécir la fenêtre pour observer l'effet !
+            </p>
+            <code>Valeurs : stretch (par défaut) | flex-start | center | flex-end | space-between | space-around</code>
+
+            <ul class="flex-container align-content--stretch flex-wrap--wrap">
+              <span class="flex-property__value">stretch (défaut)</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--flex-start">
+              <span class="flex-property__value">flex-start</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--center">
+              <span class="flex-property__value">center</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--flex-end">
+              <span class="flex-property__value">flex-end</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--space-between">
+              <span class="flex-property__value">space-between</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--space-around">
+              <span class="flex-property__value">space-around</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+            <ul class="flex-container align-content--space-evenly">
+              <span class="flex-property__value">space-evenly</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item">Item 2</li>
+              <li class="flex-item">Item 3</li>
+              <li class="flex-item">Item 4</li>
+              <li class="flex-item">Item 5</li>
+              <li class="flex-item">Item 6</li>
+              <li class="flex-item">Item 7</li>
+              <li class="flex-item">Item 8</li>
+              <li class="flex-item">Item 9</li>
+              <li class="flex-item">Item 10</li>
+              <li class="flex-item">Item 11</li>
+              <li class="flex-item">Item 12</li>
+            </ul>
+
+          </section>
+        </details>
+      </details>
+    </article>
+
+    <article>
+      <details>
+        <summary>
+          <h2>Propriétés des ENFANTS (flex-item)</h2>
+        </summary>
+
+        <p class="section-intro">Découvrez comment contrôler la disposition de vos éléments avec ces propriétés
+          essentielles des éléments flexibles.</p>
+
+        <!-- ALIGN-SELF  -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">align-self</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'alignement d'un élément spécifique le long de l'axe
+              transversal.
+            </p>
+            <code>Valeurs : auto (par défaut) | stretch | flex-start | center | flex-end | baseline</code>
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">auto (défaut)</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--auto">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">stretch</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--stretch">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">flex-start</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--flex-start">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">center</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--center">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">flex-end</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--flex-end">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+
+            <ul class="flex-container" style="height: 20rem;">
+              <span class="flex-property__value">baseline</span>
+              <li class="flex-item">Item 1</li>
+              <li class="flex-item align-self--baseline">Item 2</li>
+              <li class="flex-item">Item 3</li>
+            </ul>
+          </section>
+        </details>
+
+        <!-- ORDER -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">order</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit l'ordre des éléments.</p>
+            <code>Valeurs : 0 (par défaut) | nombre</code>
+            <ul class="flex-container">
+              <span class="flex-property__value">order : 0 (défaut)</span>
+              <li class="flex-item">order : 0</li>
+              <li class="flex-item">order : 0</li>
+              <li class="flex-item">order : 0</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">order : 1</span>
+              <li class="flex-item">order : 0</li>
+              <li class="flex-item order--1">order : 1</li>
+              <li class="flex-item">order : 0</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">order : 2</span>
+              <li class="flex-item order--2">order : 2</li>
+              <li class="flex-item">order : 0</li>
+              <li class="flex-item order--1">order : 1</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">order : -1</span>
+              <li class="flex-item order--2">order : 2</li>
+              <li class="flex-item">order : 0</li>
+              <li class="flex-item order--minus-1">order : -1</li>
+            </ul>
+          </section>
+        </details>
+
+        <details>
+          <summary>
+            <h3 class="flex-property__name">flex-grow</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit la capacité d'un élément à s'agrandir.</p>
+            <code>Valeurs : 0 (par défaut) | nombre</code>
+            <ul class="flex-container">
+              <span class="flex-property__value">flex-grow: 0 (défaut)</span>
+              <li class="flex-item flex-grow--0">flex-grow : 0</li>
+              <li class="flex-item">flex-grow : 0</li>
+              <li class="flex-item">flex-grow : 0</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">flex-grow : 1</span>
+              <li class="flex-item">flex-grow : 0</li>
+              <li class="flex-item">flex-grow: 1</li>
+              <li class="flex-item">flex-grow : 0</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">flex-grow : 2</span>
+              <li class="flex-item">flex-grow : 0</li>
+              <li class="flex-item flex-grow--1">flex-grow: 1</li>
+              <li class="flex-item flex-grow--2">flex-grow: 2</li>
+            </ul>
+          </section>
+        </details>
+
+        <details>
+          <summary>
+            <h3 class="flex-property__name">flex-shrink</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Définit la capacité d'un élément à se rétrécir.<br>Rétrécir la fenêtre
+              pour observer l'effet !</p>
+            <code>Valeurs : 1 (par défaut) | nombre</code>
+            <ul class="flex-container flex-wrap--nowrap">
+              <span class="flex-property__value">flex-shrink : 1 (défaut)</span>
+              <li class="flex-item flex-shrink--0 flex-grow--0">flex-shrink : 0<br>flex-grow : 0</li>
+              <li class="flex-item flex-shrink--1 flex-grow--0">flex-shrink : 1<br>flex-grow : 0</li>
+              <li class="flex-item flex-shrink--2 flex-grow--0">flex-shrink : 2<br>flex-grow : 0</li>
+            </ul>
+          </section>
+
+        </details>
+
+        <!-- FLEX -->
+        <details>
+          <summary>
+            <h3 class="flex-property__name">flex</h3>
+          </summary>
+          <section class="flex-property">
+            <p class="flex-property__description">Raccourci pour les propriétés flex-grow, flex-shrink et flex-basis.
+            </p>
+            <code>Valeurs : 0 1 auto (par défaut) | nombre</code>
+            <ul class="flex-container">
+              <span class="flex-property__value">flex: 0 1 auto (défaut)</span>
+              <li class="flex-item flex--0-1-auto">flex: 0 1 auto</li>
+              <li class="flex-item flex--0-1-auto">flex: 0 1 auto</li>
+              <li class="flex-item flex--0-1-auto">flex: 0 1 auto</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">flex: 1 0 100px</span>
+              <li class="flex-item flex--1-0-100px">flex: 1 0 100px</li>
+              <li class="flex-item flex--1-0-100px">flex: 1 0 100px</li>
+              <li class="flex-item flex--1-0-100px">flex: 1 0 100px</li>
+            </ul>
+
+            <ul class="flex-container">
+              <span class="flex-property__value">flex: 2 1 200px</span>
+              <li class="flex-item flex--0-1-200px">flex: 0 1 200px</li>
+              <li class="flex-item flex--1-1-200px">flex: 1 1 200px</li>
+              <li class="flex-item flex--2-1-200px">flex: 2 1 200px</li>
+            </ul>
+          </section>
+        </details>
+      </details>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - M.TOULOUSE - Guide visuel interactif sur Flexbox</p>
+  </footer>
+</body>
+
+</html>
