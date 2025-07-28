@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "New Moon",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true,
+		// "liveServer.settings.port": 6000,
+		// "liveServer.settings.CustomBrowser": "chrome"
+	},
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-rename-tag",
+		"naumovs.color-highlight",
+		"vscode-icons-team.vscode-icons",
+		"ms-vscode.live-server",
+		"ritwickdey.liveserver",
+		"tomoki1207.pdf",
+		"vunguyentuan.vscode-css-variables",
+		"shd101wyy.markdown-preview-enhanced"
+	]
+}
