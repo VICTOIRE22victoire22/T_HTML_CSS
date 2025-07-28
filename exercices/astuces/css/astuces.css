@@ -1,0 +1,17 @@
+@import url('./reset.css');
+
+
+.progress {
+    background-color: #49c92c;
+    overflow: hidden;
+}
+
+.progress__bar::-webkit-progress-bar {
+    background-color: #bc2424;
+    border-radius: 10px;
+}
+
+.progress__bar::-moz-progress-bar {
+    background-color: #bc2424;
+    border-radius: 10px;
+}

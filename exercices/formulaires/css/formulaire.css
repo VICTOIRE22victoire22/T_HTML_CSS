@@ -1,0 +1,126 @@
+@import url('./reset.css');
+
+
+/*---------------------------------------
+FORMULAIRE
+----------------------------------------*/
+.contact {
+    background-color: #ffffff;
+    margin: 1rem auto;
+    width: 80%;
+    padding: 1rem;
+}
+
+.contact__fieldset {
+    padding: 1rem 2rem;
+    border: solid 2px #3358c8;
+    border-radius: 4px;
+    margin: 3rem 0;
+    max-width: 100%;
+}
+
+.contact__legend {
+    font-style: italic;
+    padding: 3px 6px;
+    margin: 3px;
+    background-color: #3358c8;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.contact__input {
+    display: block;
+    margin-top: 3px;
+    padding: 3px 4px;
+    /* width: min(max(250px, 100%), 100%); */
+    width: clamp(20rem, 300rem, 100%);
+}
+
+.contact__group {
+    border: solid red 0px;
+}
+
+.contact__group:not(:first-of-type) {
+    margin: 1rem 0;
+}
+
+.contact__label {
+    font-weight: bold;
+}
+
+.contact__label--firstname::after,
+.contact__label--email::after,
+.contact__label--password::after {
+    content: '*';
+    color: #c10808;
+}
+
+.contact__input[type='text']:focus:invalid,
+.contact__input[type='email']:focus:invalid,
+.contact__input[type='password']:focus:invalid {
+    outline: solid #c10808 1px;
+}
+
+.contact__input[type='text']:focus:valid,
+.contact__input[type='email']:focus:valid,
+.contact__input[type='password']:focus:valid {
+    outline: solid #289a05 1px;
+}
+
+.contact__input--firstname {
+    font-style: italic;
+}
+
+
+/*---------------------------------------------------
+Section préférences de contact
+----------------------------------------------------*/
+
+.contact__paragraph {
+    margin-bottom: 5px;
+    border-bottom: solid 1px #000;
+}
+
+.contact__input--radio {
+    display: inline-block;
+    accent-color: #3358c8;
+    padding: 0;
+    width: auto;
+}
+
+/*---------------------------------------------------
+Section message
+----------------------------------------------------*/
+
+.contact__select {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 3px 2px;
+    margin-top: 7px;
+
+}
+
+.contact__textarea {
+    display: block;
+    resize: vertical;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 7px;
+}
+
+.contact__textarea:focus {
+    outline: solid red 1px;
+}
+
+
+/*---------------------------------------------------
+Bouton d'envoi du formulaire
+----------------------------------------------------*/
+.contact__submit {
+    display: block;
+    color: #fff;
+    background-color: #3358c8;
+    margin: 1rem auto 0 auto;
+    padding: 3px 8px;
+}

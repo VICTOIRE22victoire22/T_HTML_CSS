@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="./css/formulaire.css">
+</head>
+
+<body>
+    <form action="" class="contact">
+        <p>* : champ obligatoire !</p>
+
+        <!-- Informations relatives au client -->
+        <fieldset class="contact__fieldset">
+            <legend class="contact__legend">Informations client</legend>
+            <div class="contact__group">
+                <label for="firstname" class="contact__label contact__label--firstname">Prénom:</label>
+                <input type="text" id="firstname" name="firstname" value=""
+                    placeholder="Entrez un prénom en minuscule sans accents" pattern="[a-z]{2,10}" required
+                    title="Format attendu : minuscules uniquement, sans accents, entre 2 et 10 caractères"
+                    class="contact__input contact__input--firstname">
+            </div>
+
+            <div class="contact__group">
+                <label for="email" class="contact__label contact__label--email">Email:</label>
+                <input type="email" id="email" name="email" value="" placeholder="Entrez votre email" required
+                    class="contact__input">
+            </div>
+
+            <div class="contact__group">
+                <label for="password" class="contact__label contact__label--password">Mot de passe:</label>
+                <input type="password" id="password" name="password" value="" placeholder="Entrez votre mot de passe"
+                    required pattern="[a-z@*#?!]{6,15}"
+                    title="Format attendu : minuscules uniquement, sans accents, entre 6 et 15 caractères sopéciaux autorisés : @,*,#,?,!"
+                    class="contact__input">
+            </div>
+        </fieldset>
+
+        <!-- Préférences de contact -->
+        <!-- https://www.w3schools.com/html/html_forms.asp -->
+        <fieldset class="contact__fieldset">
+            <legend class="contact__legend">Préférences de contact</legend>
+
+
+            <p class="contact__paragraph">Mode de contact souhaité :</p>
+            <div class="contact__group">
+                <input type="radio" id="phone" name="radio-btn" value="" class="contact__input contact__input--radio">
+                <label for="phone" class="contact__label">téléphone</label>
+            </div>
+
+            <div class="contact__group">
+                <input type="radio" id="mail" name="radio-btn" value="" class="contact__input contact__input--radio">
+                <label for="mail" class="contact__label">email</label>
+            </div>
+
+            <p class="contact__paragraph">Horaires de contact :</p>
+            <div class="contact__group">
+                <input type="radio" id="morning" name="radio-schedule" value=""
+                    class="contact__input contact__input--radio">
+                <label for="morning" class="contact__label">Matin (9h-12h)</label>
+            </div>
+
+            <div class="contact__group">
+                <input type="radio" id="afternoon" name="radio-schedule" value=""
+                    class="contact__input contact__input--radio">
+                <label for="afternoon" class="contact__label">Après-midi (14h-17h)</label>
+            </div>
+
+            <div class="contact__group">
+                <input type="radio" id="evening" name="radio-schedule" value=""
+                    class="contact__input contact__input--radio">
+                <label for="evening" class="contact__label">Soir (17h-19h)</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="contact__fieldset">
+            <legend class="contact__legend">Votre Message</legend>
+            <div class="contact__group">
+                <label for="sujet" class="contact__label contact__label--select">Sujet</label>
+                <select id="sujet" name="sujet" class="contact__select" tabindex="0">
+                    <option value="">Sélectionnez un sujet</option>
+                    <optgroup label="Support">
+                        <option value="technique">Support technique</option>
+                        <option value="commercial">Support commercial</option>
+                    </optgroup>
+                    <optgroup label="Autres">
+                        <option value="information">Demande d'information</option>
+                        <option value="reclamation">Réclamation</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="contact__group">
+                <label for="message" class="contact__label contact__label--message">Message</label>
+                <textarea id="message" name="message" class="contact__textarea" required minlength="10"
+                    placeholder="Écrivez votre message ici..." aria-required="true" rows="5" tabindex="0">
+                </textarea>
+            </div>
+        </fieldset>
+        <input type="checkbox" name="check" id="check">
+        <label for="check">J'accepte le traitement de mes données personnelles *</label>
+
+        <input type="submit" value="Envoyer" class="contact__submit" aria-label="submit">
+    </form>
+</body>
+
+</html>

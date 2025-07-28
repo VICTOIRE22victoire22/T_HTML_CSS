@@ -1,0 +1,163 @@
+@import url('./reset.css');
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: #ff00f7;
+}
+
+a {
+    color: yellow;
+}
+
+
+/*-------------------------------------------
+Page principale
+--------------------------------------------*/
+
+body {
+    padding: 10px;
+    margin: 10px;
+    border: solid 3px red;
+}
+
+header {
+    background-color: #B7DF9F;
+    border: solid 2px #7b946d;
+    padding: 10px;
+}
+
+main {
+    background-color: #FCECA1;
+    border: solid 2px #ebd572;
+    padding: 10px;
+    margin: 50px 0;
+    color: red;
+}
+
+/*-------------------------------------------
+Barre de navigation
+--------------------------------------------*/
+.navbar {
+    background-color: #FFCBC3;
+    border: solid 2px #c58d85;
+    text-align: center;
+}
+
+.navbar__item {
+    background-color: #000;
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 4px 6px;
+    border-radius: 5px;
+}
+
+.navbar__link {
+    color: #fff;
+}
+
+.test {
+    margin: 30px;
+}
+
+/*-------------------------------------------
+Recette
+--------------------------------------------*/
+#recipes__title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.recipe {
+    margin: 10px auto;
+    background-color: #B7B8BD;
+    border: solid 2px #5f6066;
+    border-radius: 8px;
+    min-width: 40%;
+    max-width: 60%;
+}
+
+.recipe__title {
+    background-color: grey;
+    border-radius: 5px 5px 0 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.recipe__description {
+    font-size: 14px;
+    text-align: justify;
+    padding: 4px;
+}
+
+.recipe__link {
+    font-size: 13px;
+}
+
+
+
+
+
+aside {
+    margin: 10px 0;
+    /* height: 80px; */
+    align-content: center;
+    background-color: #adbce7;
+    border: solid 2px #6f8de6;
+}
+
+figure {
+    border: solid red 2px;
+    height: 100%;
+    max-height: 100%;
+    /* overflow: hidden; */
+}
+
+figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #EBC0FE;
+    border: solid 2px #cf95e7;
+    background-color: #fff;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    /* height: 100px; */
+    position: relative;
+}
+
+.footer div,
+.footer svg {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}
+
+.footer :nth-child(1) {
+    background-color: red;
+    color: #fff;
+    top: 0;
+    right: 0;
+}
+
+.footer :nth-child(2) {
+    background-color: #1322a8;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+}
+
+.footer :nth-child(3) {
+    top: 0;
+    left: 0;
+}
+
+.footer :nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
