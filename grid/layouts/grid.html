@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT_1</title>
+    <style>
+        @import url('./reset.css');
+        @import url('./card.css');
+
+        body {
+            padding: 2rem;
+        }
+
+        header {
+            background-color: #201b84;
+            color: #fff;
+            text-align: center;
+            align-content: center;
+            height: 6rem;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr;
+            background-color: #10b4a4;
+            gap: 2rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            /* grid-template-rows: 10rem; */
+            text-align: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #f960d3;
+        }
+
+        article {
+            background-color: #fffb00;
+        }
+
+        aside {
+            background-color: #ff4635;
+        }
+
+        footer {
+            background-color: #1af194;
+            text-align: center;
+            align-content: center;
+            height: 6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>HEADER</header>
+    <main>
+        <nav class="center">NAV</nav>
+        <article class="center">
+            <div class="card">
+                <figure class="card__figure">
+                    <img src="./img/coding.jpg" alt="" class="card__image">
+                </figure>
+                <span class="card__tag">Technology</span>
+                <h2 class="card__title">Coding HTML/CSS</h2>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, illum
+                    suscipit
+                    ad cum laborum iste!</p>
+                <div class="card__footer">
+                    <img src="./img/face.jpg" alt="" class="card__avatar">
+                    <div class="card__user">
+                        <span class="card__user--info">Jenny Smith</span>
+                        <span class="card__user--date">Yesteday</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <aside class="center">ASIDE</aside>
+    </main>
+    <footer>FOOTER</footer>
+</body>
+
+</html>

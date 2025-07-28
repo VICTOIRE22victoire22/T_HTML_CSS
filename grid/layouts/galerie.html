@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            border: solid red 0px;
+            padding: 2rem;
+            background-color: #ab3333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;
+            grid-template-areas:
+                'image1 image1 image2 image3 info info'
+                'image1 image1 image4 image3 info info'
+                'image1 image1 image4 image3 info info'
+                'image1 image1 image4 image5 info info';
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #c7e3fa;
+            border: solid 0px green;
+        }
+
+        /* .gallery>* {
+            text-align: center;
+            align-content: center;
+        } */
+
+        .gallery__figure {
+            background-color: transparent;
+        }
+
+        .gallery__figure--1 {
+            grid-area: image1;
+        }
+
+        .gallery__figure--2 {
+            grid-area: image2;
+        }
+
+        .gallery__figure--3 {
+            grid-area: image3;
+        }
+
+        .gallery__figure--4 {
+            grid-area: image4;
+        }
+
+        .gallery__figure--5 {
+            grid-area: image5;
+        }
+
+        .gallery__card {
+            grid-area: info;
+            background-color: #fff;
+            padding: 60px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .gallery__image {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        @media print {
+            body {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+        <div class="gallery__figure gallery__figure--1"><img src="./img/img1.jpg" alt="" class="gallery__image">
+        </div>
+        <div class="gallery__figure gallery__figure--2"><img src="./img/img2.jpg" alt="" class="gallery__image">
+        </div>
+        <div class="gallery__figure gallery__figure--3"><img src="./img/img3.jpg" alt="" class="gallery__image">
+        </div>
+        <div class="gallery__figure gallery__figure--4"><img src="./img/coding.jpg" alt="" class="gallery__image">
+        </div>
+        <div class="gallery__figure gallery__figure--5"><img src="./img/chocolate.jpg" alt="" class="gallery__image">
+        </div>
+        <div class="gallery__card">
+            <h3>Avec Aurtiende, adoptez le look IKEA!</h3>
+            <p>
+                Il n'y a pas que votre intérieur qui s'abille en IKEA.
+            </p>
+            <p>Des bobs aux t-shirts en passant par les sweats à capuche et les sacs, découvrez notre
+                collecction de
+                vêtements AURTIENDE!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

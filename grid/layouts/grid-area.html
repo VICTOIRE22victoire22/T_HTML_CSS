@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT_2</title>
+    <style>
+        @import url(./reset.css);
+
+        body {
+            padding: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            background-color: #ab3030;
+            padding: 1rem;
+            /* grid-template-rows: repeat(10, 1fr); */
+        }
+
+        p {
+            background-color: #1d750b;
+            color: #ffff;
+            text-align: center;
+            align-content: center;
+        }
+
+        .grid-item:nth-child(1) {
+            /* grid-area: row-start/col-start/row-end/col-end */
+            grid-area: 1/1/2/-1;
+
+            /* grid-rom: row-start / row-end */
+            /* grid-row: 1/2; */
+
+            /* grid-column: col-start / col-end */
+            /* -1 reprente TOUJOURS la dernière ligne verticale */
+            /* grid-column: 1/-1; */
+        }
+
+        .grid-item:nth-child(2) {
+            grid-area: 2/1/6/2;
+        }
+
+        .grid-item:nth-child(3) {
+            grid-area: 2/2/3/3;
+        }
+
+        .grid-item:nth-child(4) {
+            grid-area: 2/3/3/5;
+        }
+
+        .grid-item:nth-child(5) {
+            grid-area: 3/3/4/4;
+        }
+
+        .grid-item:nth-child(6) {
+            grid-area: 3/4/5/5;
+        }
+
+        .grid-item:nth-child(10) {
+            grid-area: 5/2/6/5;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <p class="grid-item">1</p>
+        <p class="grid-item">2</p>
+        <p class="grid-item">3</p>
+        <p class="grid-item">4</p>
+        <p class="grid-item">5</p>
+        <p class="grid-item">6</p>
+        <p class="grid-item">7</p>
+        <p class="grid-item">8</p>
+        <p class="grid-item">9</p>
+        <p class="grid-item">10</p>
+    </div>

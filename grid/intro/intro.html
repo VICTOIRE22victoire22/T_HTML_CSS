@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRILLE</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        div {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 40px repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            background-color: coral;
+            padding: 20px;
+        }
+
+        p {
+            background-color: lightblue;
+        }
+
+        .last {
+            /* grid-row: 2/3;
+            grid-column: 3/5; */
+            grid-area: 2/3/3/5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div>p*6 -->
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, illo!</p>
+        <p>4</p>
+        <p>5</p>
+        <p class="last">6</p>
+    </div>
+</body>
+
+</html>

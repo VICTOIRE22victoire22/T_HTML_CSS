@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT_3</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        header {
+            grid-area: tete;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                'navig section1 section1 section2 section2 ads'
+                'navig section3 section3 section2 section2 ads'
+                'navig section4 section4 section4 section4 ads';
+            /* grid-template-rows: 20rem 20rem; */
+            gap: 1rem;
+            background-color: #c76464;
+            padding: 1rem;
+        }
+
+        /* Tous les enfants directs de main */
+        main>* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        nav {
+            grid-area: navig;
+            background-color: #fff;
+        }
+
+        section:nth-of-type(1) {
+            grid-area: section1;
+            background-color: #fff;
+        }
+
+        section:nth-of-type(2) {
+            grid-area: section2;
+            background-color: #fff;
+        }
+
+        section:nth-of-type(3) {
+            grid-area: section3;
+            background-color: #fff;
+        }
+
+        section:nth-of-type(4) {
+            grid-area: section4;
+            background-color: #fff;
+        }
+
+        aside {
+            grid-area: ads;
+            background-color: #fff;
+        }
+
+        footer {
+            grid-area: pied;
+        }
+    </style>
+</head>
+
+<body>
+    <header>HEADER</header>
+    <!-- main>nav{NAV}+section{Section n°$}*4+aside${ASIDE} -->
+    <main>
+        <nav>nav</nav>
+        <section>section n°1</section>
+        <section>section n°2</section>
+        <section>section n°3</section>
+        <section>section n°4</section>
+        <aside>aside</aside>
+    </main>
+    <footer>FOOTER</footer>
+</body>
+
+</html>
